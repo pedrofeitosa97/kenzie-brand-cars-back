@@ -8,7 +8,7 @@
     "migration:generate": "typeorm-ts-node-commonjs migration:generate ./src/migrations/migration -d ./src/data-source.ts",
     "migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run",
     "build": "rm -rf ./dist && tsc",
-    "start":  "ts-node --ignore-watch node_modules src/server.ts"
+    "start":  "node --ignore-watch node_modules src/server.ts"
   },
   "author": "Leonardo Rangel",
   "license": "ISC",
