@@ -17,11 +17,8 @@ import { Year } from "./entities/entities/year";
 const dataSourceConfig = (): DataSourceOptions => {
   return {
     type: "postgres",
-    host: process.env.PGHOST,
-    port: parseInt(process.env.PGPORT!),
-    username: process.env.PGUSER,
-    password: process.env.PGPASSWORD,
-    database: process.env.PGDATABASE,
+    url: process.env.DB_URI,
+    port: parseInt(process.env.PORT!),
     logging: false,
     entities: [
       User,
